@@ -63,8 +63,8 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.VMHOST }}
-        username: ${{ secrets.VMUSER }}
+        host: ${{ secrets.VM_HOST }}
+        username: ${{ secrets.VM_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
           # Выполняет pull образа с DockerHub
